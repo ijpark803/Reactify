@@ -1,0 +1,130 @@
+{
+  "journalEntries": [
+    {
+      "id": 1,
+      "foodName": "Spaghetti Bolognese",
+      "date": "2024-11-28",
+      "ingredients": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reaction": 1,
+      "url": "http://localhost:3000/images/sample1.jpg"
+    },
+    {
+      "id": 2,
+      "foodName": "Avocado Toast",
+      "date": "2024-11-27",
+      "ingredients": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "reaction": 2,
+      "url": "http://localhost:3000/images/sample1.jpg"
+    },
+    {
+      "id": "3e47",
+      "foodName": "sushi",
+      "date": "2024-11-28T23:05:32.888Z",
+      "ingredients": [
+        "pasta",
+        "tomato",
+        "cheese"
+      ],
+      "reaction": [
+        "bloating",
+        "fatigue",
+        "indigestion"
+      ],
+      "imageUrl": "blob:http://localhost:3001/e0b19ae5-1461-40d9-b8c0-1b6deea1311e"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Spaghetti"
+    },
+    {
+      "id": 2,
+      "name": "Tomato Sauce"
+    },
+    {
+      "id": 3,
+      "name": "Ground Beef"
+    },
+    {
+      "id": 4,
+      "name": "Onions"
+    },
+    {
+      "id": 5,
+      "name": "Garlic"
+    },
+    {
+      "id": 6,
+      "name": "Avocado"
+    },
+    {
+      "id": 7,
+      "name": "Whole Grain Bread"
+    },
+    {
+      "id": 8,
+      "name": "Egg"
+    },
+    {
+      "id": 9,
+      "name": "Salt"
+    }
+  ],
+  "reactions": [
+    {
+      "id": 1,
+      "description": "bloated"
+    },
+    {
+      "id": 2,
+      "description": "fatigue"
+    },
+    {
+      "id": 3,
+      "description": "headache"
+    },
+    {
+      "id": 4,
+      "description": "indigestion"
+    },
+    {
+      "id": 5,
+      "description": "nausea"
+    },
+    {
+      "id": 6,
+      "description": "cramps"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": 1,
+      "journalEntryId": 1,
+      "addedAt": "2024-11-28T10:00:00"
+    }
+  ],
+  "filters": [
+    {
+      "id": 1,
+      "type": "ingredient",
+      "value": "Avocado"
+    },
+    {
+      "id": 2,
+      "type": "reaction",
+      "value": "Happy and satisfied"
+    }
+  ]
+}
