@@ -6,7 +6,7 @@ import JournalEntryCard from "../JournalEntryCard";
 
 export default function Home() {
   const entries = useLoaderData();
-  //console.log("entries: ", entries)
+  console.log("entries: ", entries)
 
 return (
 
@@ -16,9 +16,14 @@ return (
         entries.map((entry) => (
           <JournalEntryCard 
             key={entry.id}
+            id={entry.id}
             foodName={entry.foodName}
-            ingredients={entry.ingredientsNames}
-            reaction={entry.reactionDescription}
+            ingredients={
+              Array.isArray(entry.ingredients)
+                ? entry.ingredients.join(", ")
+                : "No ingredients available"
+            }
+            reaction={entry.reaction}
             image = {entry.url}
           />
         ))

@@ -1,21 +1,7 @@
 {
   "journalEntries": [
     {
-      "id": 1,
-      "foodName": "Spaghetti Bolognese",
-      "date": "2024-11-28",
-      "ingredients": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "reaction": 1,
-      "url": "http://localhost:3000/images/sample1.jpg"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "foodName": "Avocado Toast",
       "date": "2024-11-27",
       "ingredients": [
@@ -25,104 +11,129 @@
         9
       ],
       "reaction": 2,
-      "url": "http://localhost:3000/images/sample1.jpg"
+      "imageUrl": "http://localhost:3000/images/sample1.jpg"
     },
     {
-      "id": "3e47",
+      "id": "1733005235723",
       "foodName": "sushi",
-      "date": "2024-11-28T23:05:32.888Z",
+      "date": "2024-11-30T22:20:35.723Z",
       "ingredients": [
         "pasta",
         "tomato",
         "cheese"
       ],
       "reaction": [
-        "bloating",
-        "fatigue",
+        "bloating"
+      ],
+      "imageUrl": "blob:http://localhost:3000/ad0f7b4b-9c86-4f05-a385-865e60c80bcd"
+    },
+    {
+      "id": "1733008045440",
+      "foodName": "fish taco",
+      "date": "2024-11-30T23:07:25.440Z",
+      "ingredients": [
+        "fish",
+        "tortilla"
+      ],
+      "reaction": [
         "indigestion"
       ],
-      "imageUrl": "blob:http://localhost:3001/e0b19ae5-1461-40d9-b8c0-1b6deea1311e"
+      "imageUrl": "blob:http://localhost:3000/9c4a59a4-0cb5-47a8-889e-4222ef0ba43a"
+    },
+    {
+      "id": "1733013562397",
+      "foodName": "pizza",
+      "date": "2024-12-01T00:39:22.397Z",
+      "ingredients": [
+        "dough",
+        "tomato",
+        "cheese"
+      ],
+      "reaction": [
+        "indigestion"
+      ],
+      "imageUrl": "blob:http://localhost:3000/56c20f5d-0d5e-4839-85db-bb3116d50453"
     }
   ],
   "ingredients": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Spaghetti"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Tomato Sauce"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Ground Beef"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Onions"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Garlic"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Avocado"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Whole Grain Bread"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Egg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Salt"
     }
   ],
   "reactions": [
     {
-      "id": 1,
+      "id": "1",
       "description": "bloated"
     },
     {
-      "id": 2,
+      "id": "2",
       "description": "fatigue"
     },
     {
-      "id": 3,
+      "id": "3",
       "description": "headache"
     },
     {
-      "id": 4,
+      "id": "4",
       "description": "indigestion"
     },
     {
-      "id": 5,
+      "id": "5",
       "description": "nausea"
     },
     {
-      "id": 6,
+      "id": "6",
       "description": "cramps"
     }
   ],
   "bookmarks": [
     {
-      "id": 1,
+      "id": "1",
       "journalEntryId": 1,
       "addedAt": "2024-11-28T10:00:00"
     }
   ],
   "filters": [
     {
-      "id": 1,
+      "id": "1",
       "type": "ingredient",
       "value": "Avocado"
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "reaction",
       "value": "Happy and satisfied"
     }

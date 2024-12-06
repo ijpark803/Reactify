@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./routes/Index";
 import Root from "./routes/Root";
-import Login from "./routes/Login";
-import Signup from "./routes/Signup";
 import Home from "./routes/Home";
+import Post from "./routes/Post";
+import EditJournal from "./routes/EditJournal";
 
 const router = createBrowserRouter([
   {
@@ -25,29 +25,37 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home/>,
         loader() {
-          return Promise.all([
-            fetch("http://localhost:3000/journalEntries").then((response) => response.json()),
-            fetch("http://localhost:3000/ingredients").then((response) => response.json()),
-            fetch("http://localhost:3000/reactions").then((response) => response.json())
-          ])
-            .then(([journalEntries, ingredients, reactions]) => {
-              // Modify journal entries to include ingredient names and reaction descriptions
-              return journalEntries.map(entry => {
-                const ingredientsNames = entry.ingredients.map(id => {
-                  const ingredient = ingredients.find(i => String(i.id) === String(id));
-                  return ingredient ? ingredient.name : "Unknown";
-                });
-
-                const reactionDescription = reactions.find(r => String(r.id) === String(entry.reaction))?.description || "Unknown";
-
-                return { ...entry, ingredientsNames, reactionDescription };
-              });
-            });
+          return fetch(
+            `http://localhost:3000/journalEntries/?_expand=reaction&_expand=ingredients`
+          ).then((response) => {
+            //console.log(response.json())
+            return response.json();
+          });
         },
         
         
       },
-      
+      {
+        path: "/home/:postId",
+        loader({ params }) {
+          return fetch(
+            `http://localhost:3000/journalEntries/${params.postId}`
+          ).then((response) => {
+            //console.log(response.json())
+            return response.json();
+          });
+        },
+        element: <Post />,
+      },
+      {
+        path: "/home/:postId/edit",
+        loader({ params }) {
+          return fetch(`http://localhost:3000/journalEntries/${params.postId}`).then((response) => {
+            return response.json();
+          });
+        },
+        element: <EditJournal />,
+      }
       
     ],
   },

@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const JournalEntryCard = ({foodName, ingredients, reaction, url}) => {
+
+const JournalEntryCard = (props) => {
+  console.log(props)
   return (
     <div
       style={{
@@ -12,14 +15,16 @@ const JournalEntryCard = ({foodName, ingredients, reaction, url}) => {
         backgroundColor: "#fff",
       }}
     >
-      <h3 style={{ margin: "0 0 8px" }}>{foodName}</h3>
+      {/* <h3 style={{ margin: "0 0 8px" }}>{foodName}</h3> */}
+      <Link to={`http://localhost:3000/home/${props.id}`} style={{ margin: "0 0 8px" }} className="card-link">{props.foodName}</Link>
       <p style={{ margin: "4px 0" }}>
-        <strong>Ingredients:</strong> {ingredients.join(", ")}
+        {/* <strong>Ingredients:</strong> {props.ingredients.join(", ")} */}
+        <strong>Ingredients:</strong> {props.ingredients}
       </p>
       <p style={{ margin: "4px 0" }}>
-        <strong>Reaction:</strong> {reaction}
+        <strong>Reaction:</strong> {props.reaction}
       </p>
-      <img src={url} alt={foodName} />
+      <img src={props.url} alt={props.foodName} />
       {/* <button
         onClick={onFavoriteToggle}
         style={{
