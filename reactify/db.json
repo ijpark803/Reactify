@@ -5,10 +5,9 @@
       "foodName": "Avocado Toast",
       "date": "2024-11-27",
       "ingredients": [
-        6,
-        7,
-        8,
-        9
+        "pasta",
+        "tomato",
+        "cheese"
       ],
       "reaction": 2,
       "imageUrl": "http://localhost:3000/images/sample1.jpg"
@@ -121,9 +120,14 @@
   ],
   "bookmarks": [
     {
-      "id": "1",
-      "journalEntryId": 1,
-      "addedAt": "2024-11-28T10:00:00"
+      "id": "1733648203556",
+      "journalEntryId": "2",
+      "addedAt": "2024-12-08T08:56:43.556Z"
+    },
+    {
+      "id": "1733648291249",
+      "journalEntryId": "1733013562397",
+      "addedAt": "2024-12-08T08:58:11.249Z"
     }
   ],
   "filters": [

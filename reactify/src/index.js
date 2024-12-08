@@ -13,6 +13,7 @@ import Home from "./routes/Home";
 import Post from "./routes/Post";
 import EditJournal from "./routes/EditJournal";
 
+
 const router = createBrowserRouter([
   {
     element: <Root/>, 
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         element: <Home/>,
         loader() {
           return fetch(
-            `http://localhost:3000/journalEntries/?_expand=reaction&_expand=ingredients`
+            `http://localhost:3000/journalEntries/?_expand=reaction&_expand=ingredients&_embed=bookmarks`
           ).then((response) => {
             //console.log(response.json())
             return response.json();
@@ -64,7 +65,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router}>
+      {/* <UpdateDocumentTitle /> */}
+    </RouterProvider>
   </React.StrictMode>
 );
 

@@ -7,29 +7,6 @@ export default function Index() {
 
 
   const navigate = useNavigate();
-  //const posts = useLoaderData();
-
-  // const handleChangeIngredients = (event) => {
-  //   setIngredient(event.target.value);
-  // };
-
-  // const handleChangeFoodName = (event) => {
-  //   setfood(event.target.value);
-  // };
-
-  // const handleCheckboxChange = (event) => {
-  //   const { id, checked } = event.target;
-  //   setSymptoms(prevSymptoms => {
-  //     if (checked) {
-  //       return [...prevSymptoms, id];
-  //     } else {
-  //       return prevSymptoms.filter(symptom => symptom !== id);
-  //     }
-  //   });
-  // };
-  // const handleImageChange = (event) => {
-  //   setSelectedImage(event.target.files[0]);
-  // };
 
   const onSubmit=(post, event) => {
     // event.preventDefault();
@@ -53,36 +30,6 @@ export default function Index() {
       toast.success("You successfully created your post.");
     });
   };
-
-  // useEffect(() => {
-  //   // Bootstrap custom validation logic
-  //   const forms = document.querySelectorAll('.needs-validation');
-  //   Array.prototype.slice.call(forms).forEach((form) => {
-  //     form.addEventListener(
-  //       'submit',
-  //       (event) => {
-  //         if (!form.checkValidity()) {
-  //           event.preventDefault();
-  //           event.stopPropagation();
-  //         }
-  //         form.classList.add('was-validated');
-  //       },
-  //       false
-  //     );
-  //   });
-
-  //   // Cleanup function to remove event listeners
-  //   return () => {
-  //     forms.forEach((form) => {
-  //       form.removeEventListener('submit', (event) => {
-  //         if (!form.checkValidity()) {
-  //           event.preventDefault();
-  //           event.stopPropagation();
-  //         }
-  //       });
-  //     });
-  //   };
-  // }, []);
 
   return (
     <div

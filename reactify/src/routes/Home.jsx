@@ -25,6 +25,7 @@ return (
             }
             reaction={entry.reaction}
             image = {entry.url}
+            bookmark = {entry.bookmarks}
           />
         ))
       ) : (

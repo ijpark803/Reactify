@@ -9,9 +9,14 @@ export default function Form(props) {
   const [symptoms, setSymptoms] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const navigate = useNavigate();
+  const [bookmarked, setBookmark] = useState(false);
 
   const handleChangeIngredients = (event) => {
     setIngredient(event.target.value);
+  };
+
+  const handleChangeBookMark = (event) => {
+    setBookmark(event.target.value);
   };
 
   const handleChangeFoodName = (event) => {
@@ -187,17 +192,18 @@ export default function Form(props) {
             Stomach Cramps
           </label>
         </div>
-        <div class="form-check">
+        {/* <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
             name="bookmark"
             id="bookmark"
+            onChange={handleChangeBookMark}
           />
           <label class="form-check-label" for="bookmark">
             Select to Bookmark
           </label>
-        </div>
+        </div> */}
         <div class="col-12">
           <button class="btn btn-primary" type="submit">
             Submit form
