@@ -11,9 +11,9 @@ export default function Index() {
   const onSubmit=(post, event) => {
     // event.preventDefault();
     const newPost = {
-      id: Date.now().toISOString(),
+      id: Date.now().toString(),
       foodName: post.foodName,
-      date: new Date().toISOString(),
+      date: new Date().toString(),
       ingredients: post.ingredients.split(",").map(ingredient => ingredient.trim()),
       reaction: post.symptoms, 
       imageUrl: post.selectedImage ? URL.createObjectURL(post.selectedImage) : "",

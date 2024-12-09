@@ -15,6 +15,7 @@ export default function Post() {
             ingredients={post.ingredients}
             reaction={post.reaction}
             image = {post.url}
+            bookmark = {[]}
           />
 
       <button

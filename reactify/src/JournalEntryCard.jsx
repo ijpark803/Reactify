@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const JournalEntryCard = (props) => {
   const [isFavorited, setIsFavorited] = useState(props.bookmark.length > 0);
@@ -18,12 +19,15 @@ const JournalEntryCard = (props) => {
         await Promise.all(
           bookmarks.map((mark) =>
             fetch(`http://localhost:3000/bookmarks/${mark.id}`, { method: "DELETE" })
+            
           )
+          
         );
 
         console.log(`Deleted all bookmarks for journalEntryId: ${props.id}`);
         setIsFavorited(false); // Update local state
         setBookmarkAddedAt(""); // Clear timestamp
+        toast.success("Your favorite was successfully deleted.");
       } catch (err) {
         console.error("Error deleting bookmarks:", err);
       }
@@ -32,7 +36,7 @@ const JournalEntryCard = (props) => {
       const newBookmark = {
         id: Date.now().toString(),
         journalEntryId: props.id,
-        addedAt: new Date().toISOString(),
+        addedAt: new Date().toString(),
       };
       try {
         await fetch("http://localhost:3000/bookmarks", {
@@ -43,6 +47,7 @@ const JournalEntryCard = (props) => {
         console.log("Bookmark added:", newBookmark);
         setIsFavorited(true); // Update local state
         setBookmarkAddedAt(newBookmark.addedAt); // Update timestamp
+        toast.success("Your post was successfully favorited.");
       } catch (err) {
         console.error("Error adding bookmark:", err);
       }
